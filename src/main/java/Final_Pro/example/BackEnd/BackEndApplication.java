@@ -14,15 +14,15 @@ public class BackEndApplication {
 		SpringApplication.run(BackEndApplication.class, args);
 	}
 
-	@CrossOrigin("http://localhost:50631")
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedMethods("*").allowedOrigins("*");
-			}
-		};
-
-	}
+//	@CrossOrigin("http://localhost:50631")
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurer() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/**").allowedMethods("*").allowedOrigins("*");
+//			}
+//		};
+//
+//	}
 }

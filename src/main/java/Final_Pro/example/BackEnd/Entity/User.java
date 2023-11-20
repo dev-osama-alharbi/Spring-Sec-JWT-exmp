@@ -6,10 +6,11 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-enum Role{
-    ADMIN,
-    USER
-}
+
+//enum Role{
+//    ADMIN,
+//    USER;
+//}
 @Entity
 @Table(name = "User")
 public class User {
@@ -22,8 +23,8 @@ public class User {
     private String emil;
     private String pasword;
 
-    @Enumerated(EnumType.STRING)
-    private Role role;
+//    @Enumerated(EnumType.STRING)
+    private String role;
 
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -66,15 +67,15 @@ public class User {
     public void setPasword(String pasword) {
         this.pasword = pasword;
     }
-    public Role getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
-    public User(int id_user, String username, String emil, String pasword, Role role ) {
+    public User(int id_user, String username, String emil, String pasword, String role ) {
         this.id_user = id_user;
         this.username = username;
         this.emil = emil;
